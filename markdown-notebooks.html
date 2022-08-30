@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Notebooks on Windows OS &#8212; How to get Jupyter Book to work on Windows</title>
+    <title>Notebooks on Windows OS &#8212; How to get Jupyter Book to work on Windows OS?</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -96,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">How to get Jupyter Book to work on Windows</h1>
+      <h1 class="site-logo" id="site-title">How to get Jupyter Book to work on Windows OS?</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -402,14 +402,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="notebooks-on-windows-os">
 <h1>Notebooks on Windows OS<a class="headerlink" href="#notebooks-on-windows-os" title="Permalink to this headline">#</a></h1>
-<p>Jupyter Book also works on Windows OS and for easy to setup. There are several methods to do and in this guide I’ll show how to setup using one of the many methods.
-Since it was difficult to get Jupyter Notebook to work on Windows.</p>
+<p>Jupyter Book also works on Windows OS with fairly minimum effort to setup. There are several methods to do so and in this guide I’ll highlight one particular way.
+Since it is claimed that Jupyter Notebook is not as easy to to work on Windows OS.</p>
 <p>Below listing all possible ways:</p>
 <ol class="simple">
-<li><p>Using Python or Conda installation locally on a Windows OS machine.</p></li>
+<li><p>Using Python or Conda installation locally on Windows OS.</p></li>
 <li><p>Using a pre-built Docker image or creating your own.</p></li>
-<li><p>Using a Virtual Machine.</p></li>
-<li><p>Using Windows Subsystem for Linux (WSL) &amp; Linux OS from Microsoft Store (i.e. Ubuntu).</p></li>
+<li><p>Using a virtual machine.</p></li>
+<li><p>Using Windows Subsystem for Linux (WSL) &amp; Linux OS from the Microsoft Store (i.e. Ubuntu).</p></li>
 </ol>
 <p>I ended up going with #1 and will demonstrate what’s needed in this guide.</p>
 <section id="what-s-needed">
@@ -417,7 +417,7 @@ Since it was difficult to get Jupyter Notebook to work on Windows.</p>
 <p>Here is my current setup:</p>
 <ol class="simple">
 <li><p>Windows 10 (Microsoft Windows [Version 10.0.19044.1826])</p></li>
-<li><p>Python 3.10.6 app from the Microsoft Store [Available here] (<a class="reference external" href="https://www.microsoft.com/store/productId/9PJPW5LDXLZ5">https://www.microsoft.com/store/productId/9PJPW5LDXLZ5</a>)</p></li>
+<li><p>Python 3.10.6 app from the Microsoft Store <a class="reference external" href="https://www.microsoft.com/store/productId/9PJPW5LDXLZ5">Available here</a></p></li>
 </ol>
 <p>That’s all that is needed to get started! If you don’t have Python installed, please use the above link to install.</p>
 </section>
@@ -425,15 +425,7 @@ Since it was difficult to get Jupyter Notebook to work on Windows.</p>
 <h2>Install Jupyter Book<a class="headerlink" href="#install-jupyter-book" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">pandas</span> <span class="n">plotly</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">thebe</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="o">&gt;</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">pandas</span> <span class="n">plotly</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">thebe</span>
-    <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip install jupyter-book pandas plotly sphinx-thebe</span>
 </pre></div>
 </div>
 </div>
@@ -441,18 +433,34 @@ Since it was difficult to get Jupyter Notebook to work on Windows.</p>
 </section>
 <section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
+<p>Once you have installed the python libraries using pip, run the following commands in Command Prompt (cmd):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="p">{</span><span class="n">user</span><span class="p">}</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.10</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python310</span>\<span class="n">Scripts</span>\<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">jupiter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># C:\Users\{user}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\jupyter-book create jupiter</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Navigate to the directory and build the book</p>
+<p>Navigate to the directory and build the book using the following link:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="p">{</span><span class="n">user</span><span class="p">}</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.10</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python310</span>\<span class="n">Scripts</span>\<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">./</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="o">&gt;</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="p">{</span><span class="n">user</span><span class="p">}</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Packages</span>\<span class="n">PythonSoftwareFoundation</span><span class="o">.</span><span class="n">Python</span><span class="mf">.3.10</span><span class="n">_qbz5n2kfra8p0</span>\<span class="n">LocalCache</span>\<span class="n">local</span><span class="o">-</span><span class="n">packages</span>\<span class="n">Python310</span>\<span class="n">Scripts</span>\<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">./</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>The trick here was to locate the Python folder which contains the jupyter-book or adding it to your OS env path. If you have insatlled python or conda using a different method, locat ethe jupyter-book folder accordingly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="nb">dir</span> <span class="s2">&quot;\jupyter-book&quot;</span> <span class="o">/</span><span class="n">s</span> <span class="o">/</span><span class="n">p</span>
 </pre></div>
 </div>
 </div>
@@ -501,7 +509,7 @@ Since it was difficult to get Jupyter Notebook to work on Windows.</p>
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Zaid H<br/>
+    By Zaid Haddad<br/>
   
       &copy; Copyright 2022.<br/>
 </p>
